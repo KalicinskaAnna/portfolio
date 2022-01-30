@@ -143,6 +143,17 @@ body {
 	z-index: 0;
 
 	&__heading {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-between;
+		&-name,
+		&-surname {
+			position: relative;
+			padding: 0 10px;
+		}
+	}
+	&__heading {
 		font-family: 'Dancing Script', cursive;
 		font-size: 4.8rem;
 		font-weight: 300;
@@ -689,29 +700,39 @@ body {
 			width: 30%;
 		}
 	}
-	.header__heading-hover::before {
-		content: '';
-		height: 0px;
-		width: 380px;
-		bottom: 400px;
-		background-color: $light-white;
-		position: absolute;
-		transform-origin: top;
-		transition: 0.3s;
-		z-index: -1;
+
+	.header__heading {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-between;
+
+		&-name,
+		&-surname {
+			position: relative;
+			padding: 0 10px;
+		}
+
+		&-surname::before {
+			position: absolute;
+			content: '';
+			height: 1px;
+			width: 380px;
+			bottom: 10px;
+			background-color: $pure-white;
+			position: absolute;
+			transform-origin: top;
+			transition: 0.3s;
+			z-index: -1;
+		}
+		&-surname:hover::before {
+			height: 100px;
+		}
 	}
 
-	span:hover::before {
-		height: 100px;
-	}
 	.main-color {
-		// color: rgb(55, 61, 61);
 		color: $main-color;
 		z-index: 1000;
 		transition: color 0.3s;
-	}
-
-	span {
-		z-index: 100;
 	}
 }

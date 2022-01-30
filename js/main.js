@@ -4,15 +4,14 @@ const allNavItems = document.querySelectorAll('.nav__item')
 const navBtnBars = document.querySelector('.burger-btn__bars')
 const allSections = document.querySelectorAll('.section')
 const footerYear = document.querySelector('.footer__year')
-const spanColor = document.querySelector('.header__heading-hover')
+const spanColor = document.querySelector('.header__heading-surname')
 
-const addColor=()=>{
+const addColor = () => {
 	spanColor.classList.add('main-color')
 }
-const removeColor=()=>{
+const removeColor = () => {
 	spanColor.classList.remove('main-color')
 }
-
 
 const handleNav = () => {
 	nav.classList.toggle('nav--active')
@@ -59,4 +58,3 @@ spanColor.addEventListener('mouseover', addColor)
 spanColor.addEventListener('mouseleave', removeColor)
 
 
-// BEM SASS REM EM MiXIN $zmienne-kolory
