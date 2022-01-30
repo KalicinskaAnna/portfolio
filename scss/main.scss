@@ -186,15 +186,19 @@ body {
 	&__btn {
 		margin-top: 2em;
 		padding: 0.8em 1.6em;
+		left: 50%;
+		transform: translateX(-50%);
 		font-size: 1.4rem;
 		background: $main-color;
 		border: none;
 		border-radius: 8px;
 		color: $light-white;
+		a{
 		text-decoration: none;
 		text-transform: uppercase;
 		cursor: pointer;
 		text-align: center;
+		color: $light-white;}
 		&::before {
 			background-color: $secondary-color;
 		}

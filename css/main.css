@@ -333,15 +333,22 @@ body {
 .projects__btn {
   margin-top: 2em;
   padding: 0.8em 1.6em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-size: 1.4rem;
   background: #1755e7;
   border: none;
   border-radius: 8px;
   color: #eee;
+}
+
+.projects__btn a {
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
   text-align: center;
+  color: #eee;
 }
 
 .projects__btn::before {
