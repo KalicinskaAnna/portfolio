@@ -599,13 +599,13 @@ body {
 		}
 	}
 }
-// @media (min-width: 700px) {
-// 	.projects {
-// 		&__btn {
-// 			left: 50%;
-// 		}
-// 	}
-// }
+@media (min-width: 700px) {
+	.projects {
+		&__btn {
+			left: 25%;
+		}
+	}
+}
 @media (min-width: 768px) {
 	.header {
 		background-image: $blue-gradient, url('../img/startup.jpg');
@@ -628,6 +628,7 @@ body {
 		&__text {
 			font-size: 1.8rem;
 		}
+		
 	}
 
 	.hero-img {
@@ -702,6 +703,9 @@ body {
 		}
 		&__text {
 			font-size: 2.2rem;
+		}
+		&__btn {
+			left: 50%;
 		}
 	}
 	.hero-img {

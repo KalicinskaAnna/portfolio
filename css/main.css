@@ -825,6 +825,12 @@ body {
   }
 }
 
+@media (min-width: 700px) {
+  .projects__btn {
+    left: 25%;
+  }
+}
+
 @media (min-width: 768px) {
   .header {
     background-image: linear-gradient(45deg, rgba(106, 122, 148, 0.75), rgba(42, 10, 184, 0.75)), url("../img/startup.jpg");
@@ -922,6 +928,9 @@ body {
   }
   .projects__text {
     font-size: 2.2rem;
+  }
+  .projects__btn {
+    left: 50%;
   }
   .hero-img {
     padding: 40rem 2em;
