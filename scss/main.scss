@@ -193,12 +193,13 @@ body {
 		border: none;
 		border-radius: 8px;
 		color: $light-white;
-		a{
-		text-decoration: none;
-		text-transform: uppercase;
-		cursor: pointer;
-		text-align: center;
-		color: $light-white;}
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
+			cursor: pointer;
+			text-align: center;
+			color: $light-white;
+		}
 		&::before {
 			background-color: $secondary-color;
 		}
@@ -211,20 +212,38 @@ body {
 	}
 
 	&__img {
+		background-size: cover;
+		width: 100%;
+		height: 200px;
+		margin-bottom: 1em;
+		background-repeat: no-repeat;
+
 		&--first,
-		&--secound {
+		&--secound,
+		&--third,
+		&--fourth,
+		&--fifth {
 			background-size: cover;
 			width: 100%;
-			height: 200px;
+			height: 300px;
 			margin-bottom: 1em;
 			background-repeat: no-repeat;
 		}
 		&--first {
-			background-image: $gray-gradient, url('../img/playstation.jpg');
+			background-image: url('../img/telegrams.jpg');
 			background-position: center;
 		}
 		&--secound {
 			background-image: url('../img/todo.jpg');
+		}
+		&--third {
+			background-image: url('../img/board.jpg');
+		}
+		&--fourth {
+			background-image: url('../img/deadline.jpg');
+		}
+		&--fifth {
+			background-image: url('../img/sun-g7e9c54a16_640.png');
 		}
 	}
 
@@ -396,6 +415,7 @@ body {
 			margin-bottom: 0.5em;
 			font-size: 2.4rem;
 			font-weight: 300;
+			text-align: center;
 		}
 		&-text {
 			margin-bottom: 0.5em;
@@ -456,48 +476,6 @@ body {
 		color: $dark;
 	}
 }
-//CONTACT
-.contact {
-	position: relative;
-	background-color: $light-white;
-	overflow: hidden;
-	font-size: 1.3rem;
-
-	&__form,
-	&__form-top {
-		display: flex;
-		flex-direction: column;
-	}
-	&__form-label {
-		margin-bottom: 0.5em;
-		text-transform: uppercase;
-	}
-
-	&__form-input {
-		@include contactForm;
-	}
-	&__form-textarea {
-		@include contactForm;
-		max-width: 100%;
-		min-width: 100%;
-		width: 100%;
-		height: 150px;
-	}
-	&__form-btn {
-		align-self: flex-end;
-		padding: 1em;
-		width: 100%;
-		max-width: 300px;
-		color: $pure-white;
-		border: none;
-		border-radius: 8px;
-		background-color: $main-color;
-		cursor: pointer;
-		&::before {
-			background-color: $secondary-color;
-		}
-	}
-}
 
 //FOOTER
 .footer {
@@ -509,9 +487,10 @@ body {
 	&__boxes {
 		display: flex;
 		justify-content: space-between;
+		flex-direction: column;
 	}
 	.white-block {
-		background-color: $light-white;
+		background-color: $pure-white;
 	}
 
 	.wrapper {
@@ -563,14 +542,27 @@ body {
 				}
 			}
 		}
-
+		&__btn {
+			left: 32%;
+		}
 		&__title {
 			margin-bottom: 0.5em;
 			font-size: 3.4rem;
 		}
 		&__img {
 			margin-bottom: 0;
-			// max-height: 300px;
+			max-height: 300px;
+			&--first,
+			&--secound,
+			&--third,
+			&--fourth,
+			&--fifth {
+				background-size: cover;
+				width: 100%;
+				height: 250px;
+				margin-bottom: 1em;
+				background-repeat: no-repeat;
+			}
 		}
 	}
 
@@ -586,6 +578,7 @@ body {
 
 				&--right {
 					order: 1;
+					object-fit: cover;
 				}
 			}
 			&-info {
@@ -606,6 +599,13 @@ body {
 		}
 	}
 }
+// @media (min-width: 700px) {
+// 	.projects {
+// 		&__btn {
+// 			left: 50%;
+// 		}
+// 	}
+// }
 @media (min-width: 768px) {
 	.header {
 		background-image: $blue-gradient, url('../img/startup.jpg');
@@ -629,6 +629,7 @@ body {
 			font-size: 1.8rem;
 		}
 	}
+
 	.hero-img {
 		padding: 30rem 2em;
 		hr {
@@ -651,6 +652,18 @@ body {
 		&__card {
 			margin: 1em;
 			width: 45%;
+		}
+	}
+
+	.footer {
+		&__boxes {
+			flex-direction: row;
+			position: relative;
+		}
+		.footer__box {
+			position: absolute;
+			right: 10px;
+			top: 10px;
 		}
 	}
 }

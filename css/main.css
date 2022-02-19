@@ -12,14 +12,14 @@
 }
 
 .white-block-left {
-  bottom: -1px;
+  bottom: -2px;
   left: -50px;
   -webkit-transform: skew(45deg);
           transform: skew(45deg);
 }
 
 .white-block-right {
-  top: -1px;
+  top: -2px;
   right: -50px;
   -webkit-transform: skew(45deg);
           transform: skew(45deg);
@@ -366,7 +366,7 @@ body {
   margin: 2em 0;
 }
 
-.projects__img--first, .projects__img--secound {
+.projects__img {
   background-size: cover;
   width: 100%;
   height: 200px;
@@ -374,13 +374,33 @@ body {
   background-repeat: no-repeat;
 }
 
+.projects__img--first, .projects__img--secound, .projects__img--third, .projects__img--fourth, .projects__img--fifth {
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 1em;
+  background-repeat: no-repeat;
+}
+
 .projects__img--first {
-  background-image: linear-gradient(45deg, rgba(94, 97, 100, 0.75), rgba(8, 8, 8, 0.75)), url("../img/playstation.jpg");
+  background-image: url("../img/telegrams.jpg");
   background-position: center;
 }
 
 .projects__img--secound {
   background-image: url("../img/todo.jpg");
+}
+
+.projects__img--third {
+  background-image: url("../img/board.jpg");
+}
+
+.projects__img--fourth {
+  background-image: url("../img/deadline.jpg");
+}
+
+.projects__img--fifth {
+  background-image: url("../img/sun-g7e9c54a16_640.png");
 }
 
 .projects__title {
@@ -597,6 +617,7 @@ body {
   margin-bottom: 0.5em;
   font-size: 2.4rem;
   font-weight: 300;
+  text-align: center;
 }
 
 .offers__option-text {
@@ -666,65 +687,6 @@ body {
   color: #2e2e2e;
 }
 
-.contact {
-  position: relative;
-  background-color: #eee;
-  overflow: hidden;
-  font-size: 1.3rem;
-}
-
-.contact__form, .contact__form-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.contact__form-label {
-  margin-bottom: 0.5em;
-  text-transform: uppercase;
-}
-
-.contact__form-input {
-  margin-bottom: 2em;
-  padding: 0.6em 1.2em;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.6rem;
-}
-
-.contact__form-textarea {
-  margin-bottom: 2em;
-  padding: 0.6em 1.2em;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.6rem;
-  max-width: 100%;
-  min-width: 100%;
-  width: 100%;
-  height: 150px;
-}
-
-.contact__form-btn {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  padding: 1em;
-  width: 100%;
-  max-width: 300px;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  background-color: #1755e7;
-  cursor: pointer;
-}
-
-.contact__form-btn::before {
-  background-color: #164dcc;
-}
-
 .footer {
   background-image: linear-gradient(45deg, rgba(106, 122, 148, 0.75), rgba(42, 10, 184, 0.75)), url("../img/a.jpg");
   color: #fff;
@@ -740,10 +702,14 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .footer .white-block {
-  background-color: #eee;
+  background-color: #fff;
 }
 
 .footer .wrapper {
@@ -802,12 +768,23 @@ body {
   .projects__box-text--right {
     text-align: end;
   }
+  .projects__btn {
+    left: 32%;
+  }
   .projects__title {
     margin-bottom: 0.5em;
     font-size: 3.4rem;
   }
   .projects__img {
     margin-bottom: 0;
+    max-height: 300px;
+  }
+  .projects__img--first, .projects__img--secound, .projects__img--third, .projects__img--fourth, .projects__img--fifth {
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 1em;
+    background-repeat: no-repeat;
   }
   .offers__option {
     display: -webkit-box;
@@ -824,6 +801,8 @@ body {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .offers__option-info {
     display: -webkit-box;
@@ -893,6 +872,18 @@ body {
   .skills__card {
     margin: 1em;
     width: 45%;
+  }
+  .footer__boxes {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative;
+  }
+  .footer .footer__box {
+    position: absolute;
+    right: 10px;
+    top: 10px;
   }
 }
 
